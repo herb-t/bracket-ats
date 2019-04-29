@@ -1,0 +1,100 @@
+// Glue global.
+@import 'glue/scss/common/colors';
+@import 'glue/scss/common/mixins';
+@import 'glue/scss/common/common';
+
+// Hercules global.
+@import 'glue/hercules/lib/global/scss/settings/all';
+@import 'glue/hercules/lib/global/scss/tools/all';
+@import 'glue/hercules/lib/global/scss/elements/all';
+@import 'glue/hercules/lib/global/scss/generic/all';
+
+// Glue components.
+@import 'glue/scss/modal';
+@import 'glue/scss/pagination';
+@import 'glue/scss/show';
+@import 'glue/scss/tabby';
+@import 'glue/scss/tabset';
+@import 'glue/scss/zippy';
+
+// Hercules components.
+@import 'glue/hercules/lib/components/grids/grids';
+@import 'glue/hercules/lib/components/tiles/tiles';
+@import 'glue/hercules/lib/components/page/page';
+@import 'glue/hercules/lib/components/type/type';
+@import 'glue/hercules/lib/components/modal/modal';
+@import 'glue/hercules/lib/components/icons/icons';
+@import 'glue/hercules/lib/components/links/links';
+@import 'glue/hercules/lib/components/social/social';
+@import 'glue/hercules/lib/components/buttons/buttons';
+@import 'glue/hercules/lib/components/header/header';
+@import 'glue/hercules/lib/components/carousel/carousel';
+@import 'glue/hercules/lib/components/tabby/tabby';
+@import 'glue/hercules/lib/components/expansion-panels/expansion-panels';
+@import 'glue/hercules/lib/components/footer/footer';
+
+// Sample project styles.
+@import 'scss/layout';
+@import 'scss/carousel';
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 90vh;
+  overflow: hidden;
+  position: relative;
+
+  .h-c-page {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__bg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  &__logo {
+    width: 100%;
+
+    svg {
+      height: auto;
+      max-width: 100%;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .icon-logo-fill {
+      fill: white;
+    }
+
+  }
+}
+
+.logo-lockup {
+  position: relative;
+  bottom: 17px;
+  left: 10px;
+  width: 100%;
+  max-width: 255px;
+  
+  // @media $tablet
+  //   left 25px
+}
+  
+.logo-lockup-fill {
+  // fill $primary
+  
+  // @media $tablet
+  //   fill $primary
+}
+// Hercules trumps.
+@import 'glue/hercules/lib/global/scss/trumps/all';

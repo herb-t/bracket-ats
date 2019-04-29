@@ -1,0 +1,26 @@
+# General files to ignore.
+.DS_Store
+
+# Python files to ignore.
+*.pyc
+
+# Node/npm files to ignore.
+node_modules
+zassets
+npm-debug.log
+npm-debug.log*
+
+# Scaffold files to ignore.
+/env.development.yaml
+/.bracket_cache
+/dist
+/.tmp
+/zassets
+
+# Catch all for minified asset file extensions.
+*.min.js
+*.js.map
+*.min.css
+
+# Files copied from Web Standard library to ignore.
+src/hercules-assets

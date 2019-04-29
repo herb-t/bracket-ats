@@ -1,0 +1,84 @@
+{# <div class="h-c-carousel h-c-carousel--tile glue-pagination"
+    data-glue-pagination-config="{cyclical: true}">
+  <div class="h-c-carousel__wrap">
+    <ul class="glue-carousel" data-glue-carousel data-glue-pagination="carousel-tile"
+        data-glue-carousel-options="{pointerTypes: ['touch', 'mouse'], jump: true}">
+      {% for slide in content.carousel %}
+      <li class="h-c-carousel__item b-demo-carousel__item b-demo-carousel__item--{{slide.id}}">
+        <div class="h-c-headline h-c-headline--two b-demo-carousel__headline">{{slide.label}}</div>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <div class="h-c-carousel__paginate glue-pagination-previous" data-glue-pagination-label="{{content.previous}}" data-glue-pagination-update-model="false">
+      <div class="h-c-carousel__paginate-wrap">
+        <svg role="img" class="h-c-icon h-c-icon--keyboard-arrow-left">
+          <use xlink:href="#mi-keyboard-arrow-right"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div class="h-c-carousel__paginate glue-pagination-next" data-glue-pagination-label="{{content.next}}" data-glue-pagination-update-model="false">
+      <div class="h-c-carousel__paginate-wrap">
+        <svg role="img" class="h-c-icon h-c-icon--keyboard-arrow-right">
+          <use xlink:href="#mi-keyboard-arrow-right"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div class="h-c-carousel__navigation">
+      <ul class="glue-pagination-page-list" data-glue-pagination-page-list data-glue-pagination="carousel-tile" role="tablist">
+        {% for slide in content.carousel %}
+          <li class="glue-o-pagination__button-container glue-o-pagination__page-list-button-container">
+            <button type="button" class="glue-o-pagination__button glue-o-pagination__page-list-button" role="tab" data-glue-pagination-page="{{loop.index}}">{{loop.index}}</button>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  </div>
+</div> #}
+
+{% for slider in carousel %}
+<h1 class="h-c-headline h-c-headline--two">{{slider.title | safe}}</h1>
+<div class="h-c-carousel h-c-carousel--tile glue-pagination"
+    data-glue-pagination-config="{cyclical: true}">
+  <div class="h-c-carousel__wrap">
+    <ul class="glue-carousel" data-glue-carousel data-glue-pagination="carousel-tile"
+        data-glue-carousel-options="{pointerTypes: ['touch', 'mouse'], jump: true}">
+      {% for slide in slider.slides %}
+      <li class="h-c-carousel__item b-demo-carousel__item b-demo-carousel__item--{{slide.id}}">
+        <div class="h-c-headline h-c-headline--two b-demo-carousel__headline">{{slide.label}}</div>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <div class="h-c-carousel__paginate glue-pagination-previous" data-glue-pagination-label="{{content.previous}}" data-glue-pagination-update-model="false">
+      <div class="h-c-carousel__paginate-wrap">
+        <svg role="img" class="h-c-icon h-c-icon--keyboard-arrow-left">
+          <use xlink:href="#mi-keyboard-arrow-right"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div class="h-c-carousel__paginate glue-pagination-next" data-glue-pagination-label="{{content.next}}" data-glue-pagination-update-model="false">
+      <div class="h-c-carousel__paginate-wrap">
+        <svg role="img" class="h-c-icon h-c-icon--keyboard-arrow-right">
+          <use xlink:href="#mi-keyboard-arrow-right"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div class="h-c-carousel__navigation">
+      <ul class="glue-pagination-page-list" data-glue-pagination-page-list data-glue-pagination="carousel-tile" role="tablist">
+        {% for slide in slider.slides %}
+          <li class="glue-o-pagination__button-container glue-o-pagination__page-list-button-container">
+            <button type="button" class="glue-o-pagination__button glue-o-pagination__page-list-button" role="tab" data-glue-pagination-page="{{loop.index}}">{{loop.index}}</button>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  </div>
+</div>
+{% endfor %}
