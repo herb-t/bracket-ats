@@ -1,7 +1,7 @@
 # encoding=utf8
 
 content = {
-    'title': 'Web Standard Scaffold',
+    'title': 'A Touch Of Sweetness',
     'greeting': 'Hey kids, wanna try Web Standard?!',
     'resources_heading': 'Glue & Hercules Resources',
     'web_standard_intro': u'Lots of people create different websites for Google, and that’s awesome. What’s a little less awesome is that it can be tricky to keep things visually and experientially consistent across them all.',

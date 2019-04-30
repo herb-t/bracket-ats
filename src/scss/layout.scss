@@ -1,9 +1,95 @@
-// Styles for demo page.
-.b-demo-u-d-n {
-  display: none;
+// -------------------------------------
+//   Layout
+// -------------------------------------
+// -- variables | layout | typography
+// -------------------------------------
+
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+$goBlue: rgb(0, 40, 84);
+$maize: rgb(255, 203, 11);
+
+$primary: #CF6059;
+$offWhite: #ebe0dd;
+$offPink: #D9B5B6;
+// $primary: #7A9EA8;
+// $primary: $lauraBlue;
+
+// retro colors
+$teal: #01bea0;
+$orange: #ff7703;
+$yellow: #fbbc00;
+$green: #548244;
+$blue: #3d7081;
+$creme: #f5ead4;
+$lauraBlue: #7A9EA8;
+
+@mixin boxShadowSlight {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-.b-demo-page {
+@mixin boxShadowLight {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+@mixin boxShadow {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+// -------------------------------------
+//   Hercules/Glue Overrides
+// -------------------------------------
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+section {
+  margin-bottom: 54px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border: 0;
+    outline: 0;
+  }
+  
+}
+
+.h-c-copy,
+.h-c-link {
+  color: $primary;
+  font-family: 'Lato', sans-serif;
+}
+
+.h-c-headline,
+.h-c-header__nav-li-link {
+  color: $primary;
+  font-family: 'Nixie One', serif;
+}
+
+.h-c-button.h-c-button--primary {
+  background: $primary;
+  
+  &:visited {
+    color: initial;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    // background: $h-header-cta-li-link-primary-background-color--active;
+    background: darken($primary, 10%);
+    outline: none;
+  }
+}
+
+.ats-main {
   // Fix Hercules header product name/logo alignment.
   .h-c-header__product-logo-link,
   .h-c-header__drawer-product-logo-link {
@@ -14,10 +100,9 @@
   .h-c-modal__close {
     border-radius: 0;
   }
-
-  .b-demo-tile__header {
-    height: 170px;
-    overflow: hidden;
-    width: 100%;
-  }
 }
+
+.ats-icons {
+  display: none;
+}
+

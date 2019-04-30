@@ -1,22 +1,20 @@
-// Styles for demo page.
-.b-demo-carousel {
+.ats-carousel {
   &__item {
-    background-color: #43a047;
-
-    &--mmk {
-      background-color: #e53935;
-    }
-
-    &--heckyes {
-      background-color: #1e88e5;
+    background-color: transparent;
+    
+    &:hover,
+    &:active,
+    &:focus {
+      border: 0;
+      outline: 0;
     }
   }
 
-  &__headline {
+  &__item-image {
     align-items: center;
     color: #fff;
     display: flex;
-    height: 300px;
+    height: 250px !important;
     justify-content: center;
 
     // @media all and (min-width: 30rem) {
@@ -25,8 +23,41 @@
   }
 }
 
-.h-c-carousel__item {
-  outline: 1px solid black;
-  padding: 0 32px !important;
-  width: 250px !important;
+.h-c-carousel__paginate {
+  top: 42%;
 }
+
+.glue-app-supported .h-c-carousel__paginate, .glue-app-ready .h-c-carousel__paginate {
+  display: none;
+  
+  @media (min-width: 600px) {
+    display: block;
+  }
+}
+
+.h-c-carousel__item {
+  max-width: 250px !important;
+  width: 100% !important;
+}
+
+.h-c-carousel--tile .h-c-carousel__navigation {
+  bottom: 0;
+  position: relative;
+}
+
+.glue-o-pagination__button:focus .h-c-carousel__paginate-wrap:before {
+  border-color: $primary;
+}
+
+.h-c-carousel__navigation .glue-pagination-page-list .glue-o-pagination__button:before {
+  border-color: $offPink;
+}
+
+.h-c-carousel__navigation .glue-pagination-page-list .active .glue-o-pagination__button:before {
+  background: $primary;
+}
+
+.h-c-carousel__paginate-wrap svg {
+  stroke: $primary;
+}
+

@@ -16,11 +16,13 @@ import flask
 import data.nav
 import data.common
 import data.hero
+import data.overview
 import data.carousel
 
 nav = data.nav.nav
 content = data.common.content
 hero = data.hero.hero
+overview = data.overview.overview
 carousel = data.carousel.carousel
 
 global_site_vars = {
@@ -42,6 +44,7 @@ def index():
       nav=nav,
       content=content,
       hero=hero,
+      overview=overview,
       carousel=carousel,
       vars=global_site_vars,
         )

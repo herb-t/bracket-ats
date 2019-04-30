@@ -1,0 +1,49 @@
+.overview {
+  background: $primary;
+  padding: 54px 0;
+  text-align: center;
+  
+  .h-c-copy,
+  .h-c-headline {
+    color: $white;
+  }
+
+  .h-c-button.h-c-button--primary {
+    background: $white;
+    color: $primary;
+    
+    &:visited {
+      color: $primary;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      // background: $h-header-cta-li-link-primary-background-color--active;
+      background: darken($primary, 10%);
+      color: $white;
+      outline: none;
+    }
+  }
+
+  .icon-asterisk-fill {
+    fill: $white;
+  }
+
+  .card {
+    &__divider {
+      background: $white;
+      display: block;
+      height: 2px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100px;
+    }
+
+    &__prices {
+      .h-c-copy {
+        font-weight: 400;
+      }
+    }
+  }
+}

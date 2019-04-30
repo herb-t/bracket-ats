@@ -87,32 +87,34 @@
         <span class="h-c-header__initiative-logo-text">Initiative</span>
       </a>
     </div>
-
+    {#
     <nav class="h-c-header__nav">
       <ul class="h-c-header__nav-list">
         {% for nav_item in nav %}
         <li class="h-c-header__nav-li" aria-level="1">
           <a href="{{nav_item.url}}"
-              class="h-c-header__nav-li-link{% if g.page.path == nav_item.url %} h-is-active{% endif %}">
+              class="h-c-header__nav-li-link{% if g.page.path == nav_item.url %} h-is-active{% endif %}" glue-smooth-scroll glue-smooth-scroll-duration="500" glue-smooth-scroll-easing="easeInSine">
             {{nav_item.label}}
           </a>
         </li>
         {% endfor %}
       </ul>
     </nav>
-
+    #}
     <div class="h-c-header__cta">
       <ul class="h-c-header__cta-list">
+        {% for nav_item in nav %}
         <li class="h-c-header__cta-li h-c-header__cta-li--secondary">
-          <a href="#" class="h-c-header__cta-li-link
-              h-c-header__cta-li-link--secondary">
-            Lorem
+          <a href="{{nav_item.url}}" class="h-c-header__cta-li-link
+              h-c-header__cta-li-link--secondary" glue-smooth-scroll glue-smooth-scroll-duration="500" glue-smooth-scroll-easing="easeInSine">
+            {{nav_item.label}}
           </a>
         </li>
+        {% endfor %}
         <li class="h-c-header__cta-li h-c-header__cta-li--primary">
-          <a href="#demo-content" class="h-c-header__cta-li-link
-              h-c-header__cta-li-link--primary" data-glue-modal-trigger="demo">
-            Place an order
+          <a href="#modal-content" class="h-c-header__cta-li-link
+              h-c-header__cta-li-link--primary" data-glue-modal-trigger="modal">
+            Order
           </a>
         </li>
       </ul>

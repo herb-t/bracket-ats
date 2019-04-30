@@ -35,66 +35,14 @@
 
 // Sample project styles.
 @import 'scss/layout';
+@import 'scss/header';
+@import 'scss/overview';
+@import 'scss/hero';
 @import 'scss/carousel';
+@import 'scss/gallery';
+@import 'scss/services';
+@import 'scss/contact';
+@import 'scss/modal';
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 90vh;
-  overflow: hidden;
-  position: relative;
-
-  .h-c-page {
-    position: relative;
-    z-index: 1;
-  }
-
-  &__bg {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 0;
-  }
-
-  &__logo {
-    width: 100%;
-
-    svg {
-      height: auto;
-      max-width: 100%;
-      width: 100%;
-      z-index: 1;
-    }
-
-    .icon-logo-fill {
-      fill: white;
-    }
-
-  }
-}
-
-.logo-lockup {
-  position: relative;
-  bottom: 17px;
-  left: 10px;
-  width: 100%;
-  max-width: 255px;
-  
-  // @media $tablet
-  //   left 25px
-}
-  
-.logo-lockup-fill {
-  // fill $primary
-  
-  // @media $tablet
-  //   fill $primary
-}
 // Hercules trumps.
 @import 'glue/hercules/lib/global/scss/trumps/all';
